@@ -42,7 +42,7 @@ class Cammino_Orderorigin_Model_Observer
                 if (empty($httpReferer)) {
                     $utmSource = 'Direct';
                 } else {
-                    if (strpos($httpReferer, 'google.com' !== false)) {
+                    if (strpos($httpReferer, 'google.com') !== false) {
                         $utmSource = 'Google';
                     } else {
                         $utmSource = $httpReferer;
