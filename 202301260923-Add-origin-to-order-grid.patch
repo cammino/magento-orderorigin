@@ -371,19 +371,19 @@ index 699ba100..58509fa9 100644
 +        ));
 +
 +        $this->addColumn('utm_source', array(
-+            'header' => 'Origem',
++            'header' => 'utm_source',
 +            'index' => 'utm_source',
 +            'filter_index' => 'sfo.utm_source'
 +        ));
 +
 +        $this->addColumn('utm_medium', array(
-+            'header' => 'Origem',
++            'header' => 'utm_medium',
 +            'index' => 'utm_medium',
 +            'filter_index' => 'sfo.utm_medium'
 +        ));
 +
 +        $this->addColumn('utm_campaign', array(
-+            'header' => 'Origem',
++            'header' => 'utm_campaign',
 +            'index' => 'utm_campaign',
 +            'filter_index' => 'sfo.utm_campaign'
 +        ));
