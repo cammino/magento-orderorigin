@@ -7,7 +7,7 @@ class Cammino_Orderorigin_Model_Observer
     {
         $params = Mage::app()->getRequest()->getParams();
         if (!empty($params['gclid'])) {
-            Mage::helper('core/cookie')->set('gclid_cookie', $params['gclid'], 7776000, '/');
+            Mage::getSingleton('core/cookie')->set('gclid_cookie', $params['gclid'], 7776000, '/');
         }
         if (!empty($params['utm_source'])) {
             Mage::getSingleton('core/session')->setUtmSource($params['utm_source']);
@@ -55,7 +55,7 @@ class Cammino_Orderorigin_Model_Observer
         $order->setUtmCampaign($utmCampaign);
         $order->setGclid($gclid);
         $order->getResource()->saveAttribute($order, "utm_source");
-        $order->getResource()->saveGclid($order, "gclid");
+        $order->getResource()->saveAttribute($order, "gclid");
         $order->getResource()->saveAttribute($order, "utm_medium");
         $order->getResource()->saveAttribute($order, "utm_campaign");
     }
