@@ -20,14 +20,14 @@
             </cammino_orderorigin_setup>
         </resources>
         <events>
-            <sales_order_save_after>
+            <sales_order_place_after>
                 <observers>
                     <cammino_orderorigin_observer>
                         <class>Cammino_Orderorigin_Model_Observer</class>
                         <method>setOrderSources</method>
                     </cammino_orderorigin_observer>
                 </observers>
-            </sales_order_save_after>
+            </sales_order_place_after>
             <controller_action_layout_load_before>
                 <observers>
                     <cammino_orderorigin_observer>
